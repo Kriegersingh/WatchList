@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_nav"
+    app:startDestination="@id/verifyUserFragment"
+    tools:ignore="UnusedNavigation">
+
+    <fragment
+        android:id="@+id/verifyUserFragment"
+        android:name="com.blackbox.watchlist.VerifyUserFragment"
+        android:label="VerifyUserFrag"
+        tools:layout="@layout/fragment_verify_username">
+
+        <action
+            android:id="@+id/action_verify_to_home"
+            app:destination="@+id/homeFragment"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/homeFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/close_slide_enter"
+            app:popExitAnim="@anim/close_slide_exit" />
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.blackbox.watchlist.HomeFragment"
+        android:label="HomeFrag"
+        tools:layout="@layout/fragment_home_screen">
+
+        <action
+            android:id="@+id/action_home_to_watchlist"
+            app:destination="@+id/watchListFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/close_slide_enter"
+            app:popExitAnim="@anim/close_slide_exit" />
+        <action
+            android:id="@+id/action_home_to_searchlist"
+            app:destination="@+id/searchListFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/close_slide_enter"
+            app:popExitAnim="@anim/close_slide_exit" />
+
+        <action
+            android:id="@+id/action_home_to_verify"
+            app:destination="@+id/verifyUserFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/close_slide_enter"
+            app:popExitAnim="@anim/close_slide_exit" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/watchListFragment"
+        android:name="com.blackbox.watchlist.WatchListFragment"
+        android:label="WatchListFrag"
+        tools:layout="@layout/fragment_watchlist">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/searchListFragment"
+        android:name="com.blackbox.watchlist.SearchListFragment"
+        android:label="SearchListFrag"
+        tools:layout="@layout/fragment_watchlist">
+
+    </fragment>
+
+
+</navigation>

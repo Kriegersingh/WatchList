@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">WatchList</string>
+    <string name="cta_verify_now">Verify Now</string>
+    <string name="user_name">User Name</string>
+    <string name="label_my_watch_list">My watch list</string>
+    <string name="search_repo">Search Repo</string>
+    <string name="label_search">Search</string>
+</resources>
